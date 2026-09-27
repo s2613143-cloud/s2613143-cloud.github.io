@@ -1,75 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jinghan Technology - 晶汉科技</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>境涵科技｜Jinghan Technology</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* 语言切换栏样式美化 */
+.lang-selector {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.lang-selector button {
+    display: inline-block !important;
+    background: #e5e0d9;
+    border: none;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #333;
+}
+.lang-selector button:hover {
+    background: #9a6b36;
+    color: #fff;
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1px;
+    background: #d5cec5;
+    max-width: 1100px;
+}
+.contact-grid div {
+    background: white;
+    padding: 25px;
+}
+</style>
 </head>
 <body>
-    <!-- 语言切换栏 -->
-    <div class="lang-bar">
-        <button onclick="setLang('zh')">中文</button> | 
-        <button onclick="setLang('ja')">日本語</button> | 
-        <button onclick="setLang('en')">English</button>
+<header>
+    <a class="logo" href="#">境涵科技<small>JINGHAN TECHNOLOGY</small></a>
+    <nav>
+        <a href="#about" class="nav-about">关于我们</a>
+        <a href="#services" class="nav-services">服务</a>
+        <a href="#categories" class="nav-categories">采购领域</a>
+        <a href="#process" class="nav-process">合作流程</a>
+        <a href="#contact" class="nav-contact">联系我们</a>
+    </nav>
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <!-- 语言切换按钮 -->
+        <div class="lang-selector">
+            <button onclick="setLang('zh')">中文</button>
+            <button onclick="setLang('ja')">JP</button>
+            <button onclick="setLang('en')">EN</button>
+        </div>
+        <button id="menu">☰</button>
     </div>
+</header>
 
-    <div class="container">
-        <!-- 中文内容 -->
-        <div class="lang-content zh">
-            <h1>上海晶汉科技有限公司</h1>
-            <p>专注日本市场及全球智能宠物用品与商务拓展服务。</p>
-            
-            <div class="section">
-                <h2>联系方式</h2>
-                <p>📧 邮箱：<a href="mailto:mengxiang670@gmail.com">mengxiang670@gmail.com</a></p>
-                <p>📞 电话：+80 08030292811 / +86 17368903951</p>
-                <p>💬 Line：<a href="https://line.me/ti/p/oSlJgYE_5X" target="_blank">点击添加 Line 好友</a></p>
-                <p>📱 WhatsApp：+80 08030292811</p>
-            </div>
+<!-- 中文内容 -->
+<div class="lang-content zh">
+    <section class="hero"><div><p class="eyebrow">JINGHAN TECHNOLOGY</p><h1>连接中国供应链<br><span>与全球采购需求</span></h1><p class="lead">从需求确认、供应商寻找，到询价、工厂沟通与采购协调，为海外企业寻找合适的中国供应资源。</p><a class="btn" href="https://line.me/ti/p/oSlJgYE_5X" target="_blank">在线咨询 / 付费入口</a></div></section>
+    <section id="about"><p class="eyebrow">ABOUT US</p><h2>让跨境采购更简单</h2><div class="grid"><p>境涵科技专注于中国供应链与海外采购对接，帮助海外企业更高效地寻找中国供应商、比较方案并推进沟通。我们根据客户的实际需求寻找供应资源，并协助处理询价、产品资料、工厂沟通及采购协调。</p><div class="stats"><b>China<small>中国供应链</small></b><b>Global<small>海外采购</small></b><b>B2B<small>企业采购对接</small></b><b>1:1<small>需求支持</small></b></div></div></section>
+    <section id="services" class="dark"><p class="eyebrow">SERVICES</p><h2>我们可以帮你做什么</h2><div class="cards"><article><i>01</i><h3>供应商寻找</h3><p>根据产品、规格、数量及目标市场寻找中国供应商。</p></article><article><i>02</i><h3>询价与报价协调</h3><p>协助确认价格、配置、库存、交期及贸易条款。</p></article><article><i>03</i><h3>工厂沟通</h3><p>帮助海外采购方与中国工厂进行有效沟通。</p></article><article><i>04</i><h3>跨境采购支持</h3><p>从需求确认到供应商对接，提供项目采购支持。</p></article></div></section>
+    <section id="categories"><p class="eyebrow">SOURCING CATEGORIES</p><h2>采购领域</h2><div class="tags"><span>工业设备</span><span>金属制品</span><span>机械零部件</span><span>宠物用品</span><span>电子产品</span><span>家居用品</span><span>OEM / ODM</span><span>其他产品</span></div></section>
+    <section id="process" class="process"><p class="eyebrow">PROCESS</p><h2>合作流程</h2><ol><li><b>01</b><div><h3>提交需求</h3><p>告诉我们产品、规格、数量、预算及目的地。</p></div></li><li><b>02</b><div><h3>确认供应方案</h3><p>寻找并筛选合适的中国供应商。</p></div></li><li><b>03</b><div><h3>沟通与报价</h3><p>协助处理工厂沟通、技术信息、交期及贸易条件。</p></div></li><li><b>04</b><div><h3>推进采购</h3><p>根据项目需要继续协助订单及跨境采购协调。</p></div></li></ol></section>
+    <section class="cta"><p class="eyebrow">LOOKING FOR CHINA SUPPLIERS?</p><h2>有采购需求，欢迎联系我们。</h2><p>无论是明确的产品型号，还是正在寻找供应商的采购需求，都可以先发给我们确认。</p><a class="light btn" href="https://line.me/ti/p/oSlJgYE_5X" target="_blank">在线咨询 / 付费入口</a></section>
+</div>
 
-            <div class="cta-section">
-                <a href="https://line.me/ti/p/oSlJgYE_5X" class="btn-primary" target="_blank">在线咨询 / 付费入口</a>
-            </div>
-        </div>
+<!-- 日语内容 -->
+<div class="lang-content ja" style="display:none;">
+    <section class="hero"><div><p class="eyebrow">JINGHAN TECHNOLOGY</p><h1>中国のサプライチェーンと<br><span>グローバル調達をつなぐ</span></h1><p class="lead">ニーズの確認、サプライヤーの開拓から、見積もり、工場との交渉、調達コーディネートまで、海外企業に最適な中国のリソースを提供します。</p><a class="btn" href="https://line.me/ti/p/oSlJgYE_5X" target="_blank">オンライン相談・有料プラン</a></div></section>
+    <section id="about"><p class="eyebrow">ABOUT US</p><h2>クロスボーダー調達をもっとシンプルに</h2><div class="grid"><p>境涵テクノロジーは、中国のサプライチェーンと海外調達のマッチングに特化しており、海外企業が効率的に中国のサプライヤーを見つけ、提案を比較し、コミュニケーションを進めるサポートをします。</p><div class="stats"><b>China<small>中国サプライチェーン</small></b><b>Global<small>グローバル調達</small></b><b>B2B<small>企業間マッチング</small></b><b>1:1<small>サポート</small></b></div></div></section>
+    <section id="services" class="dark"><p class="eyebrow">SERVICES</p><h2>提供できるサービス</h2><div class="cards"><article><i>01</i><h3>サプライヤー開拓</h3><p>製品、仕様、数量、ターゲット市場に基づき中国サプライヤーを探します。</p></article><article><i>02</i><h3>見積もり・価格交渉</h3><p>価格、仕様、在庫、納期、貿易条件の確認をサポートします。</p></article><article><i>03</i><h3>工場とのコミュニケーション</h3><p>海外のバイヤーと中国工場の円滑な意思疎通を支援します。</p></article><article><i>04</i><h3>調達サポート</h3><p>ニーズ確認からサプライヤー選定まで、プロジェクト全体を支援します。</p></article></div></section>
+    <section id="categories"><p class="eyebrow">SOURCING CATEGORIES</p><h2>調達カテゴリー</h2><div class="tags"><span>産業機器</span><span>金属製品</span><span>機械部品</span><span>ペット用品</span><span>電子製品</span><span>日用品</span><span>OEM / ODM</span><span>その他</span></div></section>
+    <section id="process" class="process"><p class="eyebrow">PROCESS</p><h2>お取引の流れ</h2><ol><li><b>01</b><div><h3>ニーズ送信</h3><p>製品、仕様、数量、ご予算、納品先をお知らせください。</p></div></li><li><b>02</b><div><h3>調達プランの確認</h3><p>最適な中国サプライヤーを探索・選定します。</p></div></li><li><b>03</b><div><h3>交渉・見積もり</h3><p>工場との折衝、技術情報、納期、貿易条件を調整します。</p></div></li><li><b>04</b><div><h3>調達の推進</h3><p>プロジェクトの必要に応じて、発注およびクロスボーダー調達を支援します。</p></div></li></ol></section>
+    <section class="cta"><p class="eyebrow">LOOKING FOR CHINA SUPPLIERS?</p><h2>調達のニーズがございましたら、お気軽にお問い合わせください。</h2><p>具体的な製品型番からサプライヤー探しのご相談まで、お気軽にお問い合わせください。</p><a class="light btn" href="https://line.me/ti/p/oSlJgYE_5X" target="_blank">オンライン相談・有料プラン</a></section>
+</div>
 
-        <!-- 日语内容 -->
-        <div class="lang-content ja" style="display:none;">
-            <h1>上海晶漢テクノロジー</h1>
-            <p>日本市場向けスマートペット用品およびビジネス展開サポート。</p>
-            
-            <div class="section">
-                <h2>お問い合わせ</h2>
-                <p>📧 メール：<a href="mailto:mengxiang670@gmail.com">mengxiang670@gmail.com</a></p>
-                <p>📞 電話：+80 08030292811 / +86 17368903951</p>
-                <p>💬 Line：<a href="https://line.me/ti/p/oSlJgYE_5X" target="_blank">Lineで追加</a></p>
-                <p>📱 WhatsApp：+80 08030292811</p>
-            </div>
+<!-- 英语内容 -->
+<div class="lang-content en" style="display:none;">
+    <section class="hero"><div><p class="eyebrow">JINGHAN TECHNOLOGY</p><h1>Connecting China Supply Chain<br><span>with Global Sourcing Needs</span></h1><p class="lead">From requirement confirmation and supplier scouting to quotation, factory communication, and procurement coordination for overseas enterprises.</p><a class="btn" href="https://line.me/ti/p/oSlJgYE_5X" target="_blank">Online Consultation / Paid Services</a></div></section>
+    <section id="about"><p class="eyebrow">ABOUT US</p><h2>Making Cross-Border Sourcing Simpler</h2><div class="grid"><p>Jinghan Technology specializes in connecting the Chinese supply chain with overseas procurement. We help global enterprises efficiently find suppliers, compare options, and streamline communication.</p><div class="stats"><b>China<small>Supply Chain</small></b><b>Global<small>Sourcing</small></b><b>B2B<small>Matching</small></b><b>1:1<small>Support</small></b></div></div></section>
+    <section id="services" class="dark"><p class="eyebrow">SERVICES</p><h2>What We Can Do For You</h2><div class="cards"><article><i>01</i><h3>Supplier Scouting</h3><p>Find suppliers based on product, specifications, quantity, and market.</p></article><article><i>02</i><h3>Quotation Coordination</h3><p>Assist in confirming pricing, specifications, inventory, and delivery terms.</p></article><article><i>03</i><h3>Factory Communication</h3><p>Help overseas buyers communicate effectively with Chinese factories.</p></article><article><i>04</i><h3>Procurement Support</h3><p>Provide project procurement support from requirement to supplier matching.</p></article></div></section>
+    <section id="categories"><p class="eyebrow">SOURCING CATEGORIES</p><h2>Sourcing Categories</h2><div class="tags"><span>Industrial Equipment</span><span>Metal Products</span><span>Mechanical Parts</span><span>Pet Supplies</span><span>Electronics</span><span>Home Goods</span><span>OEM / ODM</span><span>Others</span></div></section>
+    <section id="process" class="process"><p class="eyebrow">PROCESS</p><h2>Our Process</h2><ol><li><b>01</b><div><h3>Submit Requirements</h3><p>Tell us your product, specs, quantity, budget, and destination.</p></div></li><li><b>02</b><div><h3>Confirm Plan</h3><p>Search and filter suitable Chinese suppliers.</p></div></li><li><b>03</b><div><h3>Negotiation & Quotation</h3><p>Assist with factory communication, tech specs, and trade terms.</p></div></li><li><b>04</b><div><h3>Execute Sourcing</h3><p>Provide ongoing support for orders and cross-border coordination.</p></div></li></ol></section>
+    <section class="cta"><p class="eyebrow">LOOKING FOR CHINA SUPPLIERS?</p><h2>Have sourcing needs? Contact us today.</h2><p>Whether you have specific product models or are looking for reliable suppliers, feel free to reach out.</p><a class="light btn" href="https://line.me/ti/p/oSlJgYE_5X" target="_blank">Online Consultation / Paid Services</a></section>
+</div>
 
-            <div class="cta-section">
-                <a href="https://line.me/ti/p/oSlJgYE_5X" class="btn-primary" target="_blank">オンライン相談・有料プラン</a>
-            </div>
-        </div>
-
-        <!-- 英语内容 -->
-        <div class="lang-content en" style="display:none;">
-            <h1>Shanghai Jinghan Technology Co., Ltd.</h1>
-            <p>Smart pet supplies and global business expansion services.</p>
-            
-            <div class="section">
-                <h2>Contact Us</h2>
-                <p>📧 Email: <a href="mailto:mengxiang670@gmail.com">mengxiang670@gmail.com</a></p>
-                <p>📞 Phone: +80 08030292811 / +86 17368903951</p>
-                <p>💬 Line: <a href="https://line.me/ti/p/oSlJgYE_5X" target="_blank">Add on Line</a></p>
-                <p>📱 WhatsApp: +80 08030292811</p>
-            </div>
-
-            <div class="cta-section">
-                <a href="https://line.me/ti/p/oSlJgYE_5X" class="btn-primary" target="_blank">Online Consultation / Paid Services</a>
-            </div>
-        </div>
+<!-- 统一的底部联系方式（带你提供的所有真实联系信息和付费咨询） -->
+<section id="contact">
+    <p class="eyebrow">CONTACT</p>
+    <h2>联系我们 / お問い合わせ / Contact Us</h2>
+    <div class="contact-grid">
+        <div><small>COMPANY</small><b>上海境涵科技有限公司</b><p>Jinghan Technology</p></div>
+        <div><small>EMAIL</small><b>mengxiang670@gmail.com</b><p>欢迎发送采购需求</p></div>
+        <div><small>PHONES</small><b>+80 08030292811</b><b>+86 17368903951</b><p>电话咨询</p></div>
+        <div><small>LINE / WHATSAPP</small><b><a href="https://line.me/ti/p/oSlJgYE_5X" target="_blank">点击添加 Line 好友</a></b><p>WhatsApp: +80 08030292811</p></div>
     </div>
+    <div style="margin-top: 30px; text-align: center;">
+        <a class="btn" href="https://line.me/ti/p/oSlJgYE_5X" target="_blank" style="background: #2ea44f;">在线咨询 / 付费入口 (Consultation & Payment)</a>
+    </div>
+    <footer>© 2026 Jinghan Technology. All rights reserved.</footer>
+</section>
 
-    <script src="script.js"></script>
+<script>
+function setLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(el => {
+        el.style.display = 'none';
+    });
+    document.querySelector('.lang-content.' + lang).style.display = 'block';
+}
+</script>
+<script src="script.js"></script>
 </body>
 </html>
